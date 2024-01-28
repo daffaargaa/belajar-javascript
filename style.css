@@ -1,0 +1,123 @@
+body {
+    font-family: Verdana;
+    font-size: 1em;
+    background-color: hsl(0, 0%, 90%)
+}
+
+/* .container {
+    text-align: center;
+    align-items: center;
+}
+
+button {
+    background-color: rgb(8, 181, 255);
+    color: white;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+} */
+
+/* form {
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.3);
+}
+
+#textBox {
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+    border: 2px solid black;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 15px;
+    background-color: antiquewhite;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+#result {
+    font-size: 1.75em;
+    font-weight: bold;
+} */
+
+
+#container {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    background-color: hsl(210, 100%, 50%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(210, 100%, 70%);
+}
+
+button:active {
+    background-color: hsl(210, 100%, 90%);
+}
+
+input {
+    font-size: 2rem;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#diceResult {
+    margin: 25px;
+}
+
+#diceImages img {
+    width: 150px;
+    margin: 5x;
+}
