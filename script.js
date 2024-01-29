@@ -841,3 +841,23 @@ dan mengembalikan array baru, bedanya sama foreach dia ga balikin array baru
 /**
  * class, 5.17.51
  */
+
+ 
+/**
+ * Iseng coba countdown
+ */
+
+// const countdownDate = new Date("Jan 29, 2024 19:00:00");
+
+// const x = setInterval(() => {
+//     const now = new Date().getTime();
+//     const distance = countdownDate - now;
+
+//     const days = Math.floor(distance / (1000 *  60 * 60 * 24));
+//     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
+//     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+//     document.getElementById('myH1').textContent = days + 'd ' + hours + 'h ' + 
+//     minutes + 'm ' + seconds + ' s';
+// }, 1000);
