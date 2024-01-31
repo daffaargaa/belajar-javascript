@@ -842,22 +842,461 @@ dan mengembalikan array baru, bedanya sama foreach dia ga balikin array baru
  * class, 5.17.51
  */
 
- 
+// class Product {
+//     constructor(name, price) {
+//         this.name = name;
+//         this.price = price;
+//     }
+
+//     displayProduct() {
+//         console.log(`Product: ${this.name}`);
+//         console.log(`Price: $${this.price}`);
+//     }
+
+//     calculateTotal(salesTax) {
+//         return this.price + (this.price * salesTax);
+//     }
+// }
+
+// const salesTax = 0.1;
+
+// const product1 = new Product("Shirt", 19.99);
+// const product2 = new Product("Pants", 30);
+
+// const total = product2.calculateTotal(salesTax);
+// console.log(`Total price (with tax): $${total.toFixed(2)}`);
+
+
 /**
- * Iseng coba countdown
+ * static, keyword yanbg mendefinisikan method atau properti
+ * tersebut dimiliki oleh class;
+ * (class owns anything static, not the objects);
  */
 
-// const countdownDate = new Date("Jan 29, 2024 19:00:00");
+// class User {
+//     static userCount = 0;
 
-// const x = setInterval(() => {
-//     const now = new Date().getTime();
-//     const distance = countdownDate - now;
+//     constructor(username) {
+//         this.username = username;
+//         User.userCount++;
+//     }
 
-//     const days = Math.floor(distance / (1000 *  60 * 60 * 24));
-//     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
-//     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//     sayHello() {
+//         console.log(`Hello! my name is ${this.username}`);
+//     }
 
-//     document.getElementById('myH1').textContent = days + 'd ' + hours + 'h ' + 
-//     minutes + 'm ' + seconds + ' s';
-// }, 1000);
+//     static getUserCount() {
+//         console.log(`There are ${this.userCount} users`);
+//     }
+// }
+
+// const user1 = new User("Daffa");
+// const user2 = new User("Arga");
+
+// console.log(user1.username);
+// console.log(user2.username);
+// console.log(User.userCount);
+
+// user2.sayHello();
+// User.getUserCount();
+
+
+/**
+ * Inheritance, nurunin properties dan method dari parent
+ */
+
+// class Animal {
+//     alive = true;
+
+//     eat() {
+//         console.log(`This ${this.name} is eating`);
+//     }
+//     sleep() {
+//         console.log(`This ${this.name} is sleeping`);
+//     }
+// }
+
+// class Rabbit extends Animal {
+//     name = 'Rabbit';
+//     age = 23;
+// }
+
+// class Fish extends Animal {
+//     name = 'Fish';
+// }
+
+// const rabbit = new Rabbit();
+// const fish = new Fish();
+
+
+// console.log(rabbit.alive);
+// rabbit.eat();
+// rabbit.sleep();
+
+/**
+ * SUPER keyword  
+ */
+
+// class Animal {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     move(speed) {
+//         console.log(`The ${this.name} moves at a speed of ${speed} km/h`)
+//     }
+// }
+
+// class Rabbit extends Animal {
+//     constructor(name, age, runSpeed) {
+//         super(name, age);
+//         this.runSpeed = runSpeed;
+//     }
+    
+//     run() {
+//         console.log(`This ${this.name} can run`);
+//         super.move(this.runSpeed);
+//     }
+// }
+
+// class Fish extends Animal {
+//     constructor(name, age, swimSpeed) {
+//         super(name, age);
+//         this.swimSpeed = swimSpeed;
+//     }
+
+//     swim() {
+//         console.log(`This ${this.name} can swim`);
+//         super.move(this.swimSpeed);
+//     }
+// }
+
+// const rabbit = new Rabbit('rabbit', 1, 25);
+// const fish = new Fish('fish', 2, 12);
+
+// rabbit.run();
+// fish.swim();
+
+/**
+ * getter and setter
+ * getter, bisa dibaca
+ * setter, bisa ditulis
+ */
+
+// 
+// class Rectangle {
+//     constructor(width, height) {
+//         this.width = width;
+//         this.height = height;
+//     }
+
+//     set width(newWidth) {
+//         if (newWidth > 0) {
+//             this._width = newWidth;
+//         }
+//         else {
+//             console.error('Width must be a positive number');
+//         }
+//     }
+
+//     set height(newHeight) {
+//         if (newHeight > 0) {
+//             this._height = newHeight;
+//         }
+//         else {
+//             console.error('Height must be a positive number');
+//         }
+//     }
+
+//     get width() {
+//         return this._width;
+//     }
+
+//     get height() {
+//         return this._height;
+//     }
+
+//     get area() {
+//         return this._width * this._height;
+//     }
+// }
+
+// const rectangle = new Rectangle(3, 4);
+
+// rectangle.width = 5;
+// rectangle.height = 4;
+
+
+// console.log(rectangle.width);
+// console.log(rectangle.height);
+// console.log(rectangle.area);
+
+/**
+ * destructuring, destruktur elemen
+ */
+
+// let a = 1;
+// let b = 2;
+
+// [a, b] = [b, a];
+
+// console.log(a)
+// console.log(b)
+
+// const colors = ["red", "green", "blue"];
+
+// [colors[0], colors[2]] = [colors[2], colors[0]];
+
+// console.log(colors);
+
+// const person1 = {
+//     firstName: "Daffa",
+//     age: 30
+// }
+
+// const person2 = {
+//     firstName: "Salsa",
+//     age: 60
+// }
+
+// const {firstName, age} = person1;
+
+// console.log(age)
+
+/**
+ * nested objects, objek didalam objek
+ */
+
+// const person = {
+//     fullName: "Daffa",
+//     age: 23,
+//     isStudent: false,
+//     hobbies: ['Valorant', 'Bucin'],
+//     address: {
+//         street: 'Barokah I',
+//         city: 'Tangerang',
+//         country: 'Indonesia'
+//     }
+// }
+// console.log(person.address);
+
+/**
+ * Array of objects
+ */
+
+// const fruits = [
+//     {name: 'apple', color: 'red'}, 
+//     {name: 'orange', color: 'orange'}, 
+//     {name: 'banana', color: 'yellow'}
+// ];
+// fruits.push({name: 'grape', color: 'purple'});
+
+// fruits.forEach(fruit => console.log(fruit.color));
+// const fruitNames = fruits.map(fruit => fruit.name);
+// const yellowFruits = fruits.filter(fruit => fruit.color === 'yellow');
+
+
+/**
+ * Sort method, sort element array
+ */
+
+// let fruits = ['apple', 'orange', 'banana'];
+// let numbers = [1,3,2,4,5,6,75,8,9,23];
+
+// console.log(
+//     numbers.sort((a, b) => b - a)
+// );
+
+// const fruits = [
+//     {name: 'apple', color: 'red'}, 
+//     {name: 'orange', color: 'orange'}, 
+//     {name: 'banana', color: 'yellow'}
+// ];
+
+// fruits.sort((a, b) => a.name.localeCompare(b.name));
+
+// console.log(fruits);
+
+/**
+ * Dates object
+ */
+
+// const date = new Date();
+
+// console.log(date.getFullYear());
+// console.log(date.getMonth());
+// console.log(date.getDate());
+// console.log(date.getHours());
+// console.log(date.getMinutes());
+// console.log(date.getSeconds());
+// console.log(date.getDay());
+
+// date.setFullYear(2024);
+// date.setMonth(0);
+// date.setDate(1);
+// date.setHours(2);
+// date.setMinutes(3);
+// date.setSeconds(3);
+
+// console.log(date);
+
+/**
+ * Closure, function yang didefinsiikan
+ * didalam function itu PENTING NIH
+ * 
+ * kek jadi bikin function best practice
+ * biar ga asal bikin ada setter getter 
+ * lebih dinamis
+ */
+
+// function createGame() {
+//     let score = 0;
+
+//     function increaseScore(points) {
+//         score += points;
+//         console.log(`+${points}pts`);
+//     }
+
+//     function decreaseScore(points) {
+//         score -= points;
+//         console.log(`+${points}pts`);
+//     }
+
+//     function getScore() {
+//         return score;
+//     }
+
+//     return {increaseScore, decreaseScore, getScore};
+// }
+
+
+// const game = createGame();
+
+// game.increaseScore(3);
+// game.decreaseScore(300);
+// game.increaseScore(30000);
+
+// console.log(`${game.getScore()}`);
+
+/**
+ * setTimeout(callback, delay); buat menjadwalkan
+ * kapan kita bisa berentiin, entah itu countdown
+ * atau dari klik manuisianya.
+ */
+
+// setTimeout(() => window.alert('Hello'), 3500);
+
+// const timeoutId = setTimeout(() => window.alert('Hello'), 3500);
+
+// clearTimeout(timeoutId);
+
+// let timeoutId;
+
+// function startTimer() {
+//     timeoutId = setTimeout(() => window.alert('Hello'), 3000);
+//     console.log('Starter');
+// }
+
+// function clearTimer() {
+//     clearTimeout(timeoutId);
+//     console.log('cleared');
+// }
+
+/**
+ * skip stopwatch dan jam dunia
+ * 
+ * ES6 Modules
+ */
+
+// import {phi, getCircumference, getArea, getVolume} from './mathUtil.js';
+
+// const circumference = getCircumference(10);
+
+// console.log(phi);
+// console.log(`${circumference.toFixed(2)} cm`);
+// console.log(getArea(10));
+// console.log(getVolume(10));
+
+/**
+ * synchronous, jalankan perintah berurutan
+ * yang menunggu sebuah perintah untuk selesai
+ * 
+ * asynchronous, jalankan perintah masing2
+ * tanpa harus nunggu flow lain untuk
+ * selesai
+ */
+
+// function func1(callback) {
+//     setTimeout(() => {console.log("Task 1");
+//         callback()}, 3000);
+// }
+
+// function func2() {
+//     console.log("Task 2");
+//     console.log("Task 3");
+//     console.log("Task 4");
+// }
+
+// func1(func2);
+
+/**
+ * Error handling try catch
+ * try, coba kode yg error
+ * catch, buat jalanin kalo try gabisa
+ * finally, selalu dijalankan
+ */
+
+// try {
+//     const dividend = Number(window.prompt("Enter a dividend: "));
+//     const divisor = Number(window.prompt("Enter a divisor: "));
+
+//     if(divisor == 0) {
+//         throw new Error('You cant divice by Zero');
+//     }
+//     if (isNaN(dividend) || isNaN(divisor)) {
+//         throw new Error('values harus angka');
+//     }
+
+//     const result = dividend / divisor;
+//     console.log(result);
+// }
+// catch(error) {
+//     console.error(error);
+// }
+
+/**
+ * Sampe dom, 8.00.00
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
