@@ -1269,34 +1269,793 @@ dan mengembalikan array baru, bedanya sama foreach dia ga balikin array baru
  * Sampe dom, 8.00.00
  */
 
+// const username = "Daffa Arga";
+// const welcomeMsg = document.getElementById("welcome-msg");
+
+// welcomeMsg.textContent += username === "" ? 'Guest' : username;
+
+/**
+ * Element Selector,
+ * manipulate html elements bisa milih satu atau 
+ * multiple elements
+ */
+
+// const myHeading = document.getElementById('my-heading');
+
+// myHeading.style.backgroundColor = 'yellow';
+// myHeading.style.textAlign = 'center';
+
+// console.log(myHeading);
+
+// const fruits = document.getElementsByClassName('fruits');
+
+// Array.from(fruits).forEach(fruit => {
+//     fruit.style.backgroundColor = 'yellow';
+// });
+
+const h4Elements = document.getElementsByTagName('h4');
+const liElements = document.getElementsByTagName('li');
+
+// h4Elements[0].style.backgroundColor = 'yellow';
+
+
+// for (let h4Element of h4Elements) {
+//     h4Element.style.backgroundColor = 'Yellow';
+// }
+
+// for (let liElement of liElements) {
+//     liElement.style.backgroundColor = 'lightgreen';
+// }
+
+// Array.from(h4Elements).forEach(h4Element => {
+//     h4Element.style.backgroundColor = 'Yellow';
+// });
+
+// Array.from(liElements).forEach(liElement => {
+//     liElement.style.backgroundColor = 'lightgreen';
+// });
+
+// const element = document.querySelector(".fruits");
+// element.style.backgroundColor = 'yellow';
+
+// const fruits = document.querySelectorAll('.fruits');
+
+// fruits.forEach(food => {
+//     food.style.backgroundColor = 'yellow';
+// })
+
+/**
+ * DOM Navigation, navigasi struktur dari
+ * element HTML dengan js
+ */
+
+// const element = document.getElementById('vegetables');
+// const firstChild = element.firstElementChild;
+// firstChild.style.backgroundColor = 'yellow';
+
+// const ulElements = document.querySelectorAll('ul');
+// ulElements.forEach(ulElement => {
+//     const firstChild = ulElement.firstElementChild;
+//     firstChild.style.backgroundColor = 'yellow';
+// });
+
+// const element = document.getElementById('fruits');
+// const lastChild = element.lastElementChild;
+// lastChild.style.backgroundColor = 'yellow';
+
+// const ulElements = document.querySelectorAll('ul');
+
+// ulElements.forEach(ulElement => {
+//     ulElement.lastElementChild.style.backgroundColor = 'yellow';
+// })
+
+// const element = document.getElementById('fruits');
+// const nextSibling = element.nextElementSibling;
+// nextSibling.style.backgroundColor = 'yellow';
+
+// const element = document.getElementById('vegetables');
+
+// element.previousElementSibling.style.backgroundColor = 'yellow';
+
+// const element = document.getElementById('fruits');
+// const parent = element.parentElement;
+// const children = element.children;
+// parent.style.backgroundColor = 'Yellow';
+// children[0].style.backgroundColor = 'red';
+
+
+/**
+ * Create HTML
+ */
+
+// const newH1 = document.createElement('h1');
+// newH1.textContent = 'I like Pizza';
+// newH1.id = 'myH1';
+// newH1.style.color = 'tomato';
+// newH1.style.textAlign = 'center';
+
+// document.body.append(newH1);
+// document.body.prepend(newH1);
+// document.getElementById('box1').append(newH1);
+// document.getElementById('box1').prepend(newH1);
+
+// const box2 = document.getElementById('box2');
+// document.body.insertBefore(newH1, box2);
+
+// const boxes = document.querySelectorAll('.box');
+// document.body.insertBefore(newH1, boxes[0]);
+
+// document.getElementById('box1').removeChild(newH1);
+
+// const newListItem = document.createElement('li');
+
+// newListItem.textContent = 'coconut';
+// newListItem.id = 'coconut';
+// newListItem.style.fontWeight = 'bold';
+// newListItem.style.backgroundColor = 'lightgreen';
+
+// document.body.prepend(newListItem);
+// document.getElementById('fruits').prepend(newListItem);
+// const banana = document.getElementById('banana');
+// document.getElementById('fruits').insertBefore(newListItem, banana);
+
+// const listItems = document.querySelectorAll('#fruits li');
+// document.getElementById('fruits').insertBefore(newListItem, listItems[1]);
+
+// document.getElementById('fruits').removeChild(newListItem);
+
+
+/**
+ * Mouse Events
+ */
+
+// const myBox = document.getElementById('myBox');
+// const myButton = document.getElementById('myButton');
+
+// myButton.addEventListener('click', event => {
+//     myBox.style.backgroundColor = 'tomato';
+//     myBox.textContent = 'ouchh!';
+// });
+
+// myButton.addEventListener('mouseover', event => {
+//     myBox.style.backgroundColor = 'yellow';
+//     myBox.textContent = 'Dont do it';
+// })
+
+// myButton.addEventListener('mouseout', event => {
+//     myBox.style.backgroundColor = 'lightgreen';
+//     myBox.textContent = 'Click me';
+// });
+
+/**
+ * keydown keyup events
+ */
+
+const myBox = document.getElementById('myBox');
+
+// document.addEventListener('keydown', event => {
+//     myBox.textContent = '😮';
+//     myBox.style.backgroundColor = 'tomato';
+// });
+
+// document.addEventListener('keyup', event => {
+//     myBox.textContent = '😃';
+//     myBox.style.backgroundColor = 'lightblue';
+// });
+
+// const moveAmount = 10;
+
+// let x = 0;
+// let y = 0;
+
+// document.addEventListener('keydown', event => {
+//     myBox.textContent = '😮';
+//     myBox.style.backgroundColor = 'tomato';
+// });
+
+// document.addEventListener('keyup', event => {
+//     myBox.textContent = '😃';
+//     myBox.style.backgroundColor = 'lightblue';
+// });
+
+// document.addEventListener('keydown', event => {
+
+//     event.preventDefault();
+    
+//     if (event.key.startsWith('Arrow')) {
+
+//         switch (event.key) {
+//             case 'ArrowUp':
+//                 y -= moveAmount;   
+//                 break; 
+//             case 'ArrowDown':
+//                 y += moveAmount;
+//                 break; 
+//             case 'ArrowLeft':
+//                 x -= moveAmount;
+//                 break;
+//             case 'ArrowRight':
+//                 x += moveAmount;
+//                 break;
+//         }
+
+//         myBox.style.top = `${y}px`;
+//         myBox.style.left = `${x}px`;
+//     }
+// });
+
+/**
+ * Hide show images
+ */
+
+// const myButton = document.getElementById('myButton');
+// const myImg = document.getElementById('myImg');
+
+// myButton.addEventListener('click', event => {
+//     if (myImg.style.visibility === 'hidden') {
+//         myImg.style.visibility = 'visible';
+//         myButton.textContent = 'Hide';
+//     }
+//     else {
+//         myImg.style.visibility = 'hidden';
+//         myButton.textContent = 'Show';
+//     }
+
+// })
+
+/**
+ * Node List, static collection of html, bisa dibuat
+ * dengan querySelectorAll()
+ * mirip array. 
+ */
+
+// let buttons = document.querySelectorAll('.myButton');
+
+// buttons.forEach(button => {
+//     button.style.backgroundColor = 'green';
+//     button.textContent = '😃';
+// });
+
+// buttons.forEach(button => {
+//     button.addEventListener('click', event => {
+//         event.target.style.backgroundColor = 'tomato';
+//     });
+// });
+
+// buttons.forEach(button => {
+//     button.addEventListener('mouseover', event => {
+//         event.target.style.backgroundColor = 'hsl(202, 100%, 40%)';
+//     });
+// });
+
+// buttons.forEach(button => {
+//     button.addEventListener('mouseout', event => {
+//         event.target.style.backgroundColor = 'hsl(202, 100%, 60%)';
+//     });
+// });
+
+// const newButton = document.createElement('button'); // STEP 1
+// newButton.textContent = 'Button 5';
+// newButton.classList = 'myButton'; // STEP 2
+// document.body.appendChild(newButton);
+
+// buttons = document.querySelectorAll('.myButton');
+
+// console.log(buttons);
+
+// Remove Element
+
+// buttons.forEach(button => {
+//     button.addEventListener('click', event => {
+//         event.target.remove();
+//         buttons = document.querySelectorAll('.myButton');
+//         console.log(buttons);
+//     });
+// })
+
+/**
+ * classList, property element di javascript 
+ * buat interaksi dengan list element dari class
+ * (CSS ClasS)
+ */
+
+// const myH1 = document.getElementById('myH1');
+// const myButton = document.getElementById('myButton');
+
+// myButton.classList.add('enabled');
+// myButton.classList.remove('enabled');
+
+// myButton.addEventListener('mouseover', event => {
+//     event.target.classList.toggle('hover');
+// })
+// myButton.addEventListener('mouseout', event => {
+//     event.target.classList.toggle('hover');
+// })
+
+// myH1.classList.add('enabled')
+// myButton.classList.add('enabled');
+
+// myButton.addEventListener('click', event => {
+//     if (event.target.classList.contains('disabled')) {
+//         event.target.textContent += '❤️';
+//     }
+//     else {
+//         event.target.classList.replace('enabled', 'disabled');
+//     }
+// });
+
+// myH1.addEventListener('click', event => {
+//     if (event.target.classList.contains('disabled')) {
+//         event.target.textContent += '❤️';
+//     }
+//     else {
+//         event.target.classList.replace('enabled', 'disabled');
+//     }
+// });
+
+// let buttons = document.querySelectorAll('.myButtons');
+
+// buttons.forEach(button => {
+//     button.classList.add('enabled');
+// });
+
+// buttons.forEach(button => {
+//     button.addEventListener('mouseover', event => {
+//         event.target.classList.toggle('hover');
+//     });
+// });
+
+// buttons.forEach(button => {
+//     button.addEventListener('mouseout', event => {
+//         event.target.classList.toggle('hover');
+//     });
+// });
+
+// buttons.forEach(button => {
+//     button.addEventListener('click', event => {
+
+//         if (event.target.classList.contains('disabled')) {
+//             event.target.textContent += '🤬';
+//         }
+//         else {
+//             event.target.classList.replace('enabled', 'disabled');
+//         }
+
+//     });
+// });
+
+/**
+ * Rock paper scissors
+ */
+
+// const choices = ['rock', 'paper', 'scissors'];
+// const playerDisplay = document.getElementById('playerDisplay');
+// const computerDisplay = document.getElementById('computerDisplay');
+// const resultDisplay = document.getElementById('resultDisplay');
+// const playerScoreDisplay = document.getElementById('playerScoreDisplay');
+// const computerScoreDisplay = document.getElementById('computerScoreDisplay');
+// let playerScore = 0;
+// let computerScore = 0;
+
+// function playGame(playerChoice) {
+//     const computerChoice = choices[Math.floor(Math.random() * 3)];
+//     let result = "";
+
+//     if (playerChoice === computerChoice) {
+//         result = "It's a tie!";
+//     }
+//     else {
+//         switch (playerChoice) {
+//             case "rock":
+//                 result = (computerChoice === 'scissors') ? 'You win' : 'You lose';
+//             break;
+//             case "paper":
+//                 result = (computerChoice === 'rock') ? 'You win' : 'You lose';
+//             break;
+//             case "scissors":
+//                 result = (computerChoice === 'paper') ? 'You win' : 'You lose';
+//             break;
+//         }
+//     }
+
+//     playerDisplay.textContent = `Player: ${playerChoice}`;
+//     computerDisplay.textContent = `Computer: ${computerChoice}`;
+//     resultDisplay.textContent = result;
+
+//     resultDisplay.classList.remove('greenText', 'redText');
+
+//     switch (result) {
+//         case 'You win':
+//             resultDisplay.classList.add('greenText');
+//             playerScore++;
+//             playerScoreDisplay.textContent = playerScore;
+//             break;
+//         case 'You lose':
+//             resultDisplay.classList.add('redText');
+//             computerScore++;
+//             computerScoreDisplay.textContent = computerScore;
+//             break;
+//     }
+// }
+
+/**
+ * Image Slider
+ */
+
+// const slides = document.querySelectorAll('.slides img');
+// let slideIndex = 0;
+// let intervalId = null;
+
+
+// document.addEventListener('DOMContentLoaded', initializeSlider);
+
+// function initializeSlider() {
+
+//     if (slides.length > 0) {
+//         slides[slideIndex].classList.add('displaySlide');
+//         intervalId = setInterval(nextSlide, 1000);
+//     }
+// }
+
+// function showSlide(index) {
+
+//     if (index >= slides.length) {
+//         slideIndex = 0;
+//     }
+//     else if (index < 0) {
+//         slideIndex = slides.length - 1;
+//     }
+
+//     slides.forEach(slide => {
+//         slide.classList.remove('displaySlide')
+//     });
+//     slides[slideIndex].classList.add('displaySlide');
+// }
+
+// function prevSlide() {
+//     clearInterval(intervalId);
+//     slideIndex--;
+//     showSlide(slideIndex);
+// }
+
+// function nextSlide() {
+//     clearInterval(intervalId);
+//     slideIndex++;
+//     showSlide(slideIndex);
+// }`
+
+
+/**
+ * Callhack Helllll, fungsi yang manggil fungsi lain
+ * setelah fungsi itu dijalankan.
+ */
+
+// function task1(callback) {
+//     setTimeout(() => {
+//         console.log('task 1 complete');
+//         callback();
+//     }, 2000);
+// }
+// function task2(callback) {
+//     setTimeout(() => {
+//         console.log('task 2 complete');
+//         callback();
+//     }, 2000);
+// }
+// function task3(callback) {
+//     setTimeout(() => {
+//         console.log('task 3 complete');
+//         callback();
+//     }, 2000);
+// }
+// function task4(callback) {
+//     setTimeout(() => {
+//         console.log('task 4 complete');
+//         callback();
+//     }, 2000);
+// }
+
+// task1(() => {
+//     task2(() => {
+//         task3(() => {
+//             task4(() => console.log('all tasks complete'));
+//         });
+//     });
+// });
+
+/**
+ * PROMISES, OBJECT yang mengatur operasi async
+ */
+
+// function walkDog() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const dogWalked = false;
+
+//             if (dogWalked) {
+//                 resolve(`You walk the dog 🐕`);
+//             }
+//             else {
+//                 reject('You didnt walk the dog');
+//             }
+//         }, 1500);
+//     });
+// }
+
+// function cleanKitchen() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const kitchenCleaned = true;
+
+//             if (kitchenCleaned) {
+//                 resolve(`You clean the kitchen 🔪`);
+//             }
+//             else {
+//                 reject('You did not clean the kitchen');
+//             } 
+//         }, 2500);
+//     });
+// }
+
+// function takeOutTrash(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const trashTakenOut = true;
+
+//             if (trashTakenOut) {
+//                 resolve('You take out the trash 🗑️');
+//             }
+//             else {
+//                 reject('You did not take out the trash')
+//             }
+//         }, 500);
+//     });
+// }
+
+// walkDog()
+//     .then(value => {console.log(value); return cleanKitchen()})
+//     .then(value => {console.log(value); return takeOutTrash()})
+//     .then(value => {console.log(value); console.log('You finish all the chores')})
+    // .catch(error => console.error(error));
+
+/**
+ * Async and Await
+ */
+
+// function walkDog() {
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 const dogWalked = true;
+    
+//                 if (dogWalked) {
+//                     resolve(`You walk the dog 🐕`);
+//                 }
+//                 else {
+//                     reject('You didnt walk the dog');
+//                 }
+//             }, 1500);
+//         });
+// }
+    
+// function cleanKitchen() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const kitchenCleaned = true;
+
+//             if (kitchenCleaned) {
+//                 resolve(`You clean the kitchen 🔪`);
+//             }
+//             else {
+//                 reject('You did not clean the kitchen');
+//             } 
+//         }, 2500);
+//     });
+// }
+
+// function takeOutTrash(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const trashTakenOut = true;
+
+//             if (trashTakenOut) {
+//                 resolve('You take out the trash 🗑️');
+//             }
+//             else {
+//                 reject('You did not take out the trash')
+//             }
+//         }, 500);
+//     });
+// }
+
+// async function doChores() {
+//     try {
+//         const walkDogResult = await walkDog();
+//         console.log(walkDogResult);
+
+//         const cleanKitchenResult = await cleanKitchen();
+//         console.log(cleanKitchenResult);
+
+//         const takeOutTrashResult = await takeOutTrash();
+//         console.log(takeOutTrashResult);
+
+//         console.log(`You finish all the chores!`);
+//     }
+//     catch (error) {
+//         console.error(error);
+//     }
+// }
+
+// doChores();
+
+/**
+ * JSON Files
+ */
+
+// const jsonNames = `["Spongebob", "Patrick" , "Squidward", "Sandy"]`;
+// const jsonPerson = `{
+//     "name" : "Spongebob",
+//     "age" : 30,
+//     "isEmployed" : true,
+//     "hobbies" : [
+//         "Jellyfishing", "Cooking", "Karate"
+//     ]
+// }`;
+// const jsonPeople = `[{
+//     "name" : "Spongebob",
+//     "age" : 30,
+//     "isEmployed" : true
+// },
+// {
+//     "name" : "Patrick",
+//     "age" : 34,
+//     "isEmployed" : false
+// }]`;
+
+// const jsonString = JSON.stringify(people);
+// console.log(jsonString)
+
+// const parsedData = JSON.parse(jsonPeople);
+// console.log(jsonPeople);
+// console.log(parsedData);
+
+// fetch("people.json")
+//     .then(response => response.json())
+//     .then(values => values.forEach(value => console.log(value.name)))
+
+/**
+ * Fetch data from pokemon API
+ */
 
 
 
+// async function fetchData() {
+//     try {
+//         const pokemonName = document.getElementById('pokemonName').value.toLowerCase();
 
+//         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
 
+//         if (!response.ok) {
+//             throw new Error("Could not fetch resource");
+//         }
 
+//         const data = await response.json();
+//         const pokemonSprite = data.sprites.front_default;
+//         const imgElement = document.getElementById('pokemonSprite');
 
+//         imgElement.src = pokemonSprite;
+//         imgElement.style.display = "block";
 
+//     }
+//     catch (error) {
+//         console.error(error);
+//     }
+// }
 
+/**
+ * Weather Apps
+ */
 
+const weatherForm = document.querySelector('.weatherForm');
+const cityInput = document.querySelector('.cityInput');
+const card = document.querySelector('.card');
+const apiKey = 'c7aa2d0ad50bf8e4d11de7fc71a3aceb';
 
+weatherForm.addEventListener('submit', async event => {
 
+    event.preventDefault();
+    
+    const city = cityInput.value;
 
+    if (city) {
+        try {
+            const weatherData = await getWeatherData(city);
+            displayWeatherInfo(weatherData);
+        }
+        catch (error) {
+            console.error(error);
+            displayError(error);
+        }
+    }
+    else {
+        displayError("Please enter a city");
+    }
 
+});
 
+async function getWeatherData(city) {
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    
+    const response = await fetch(apiUrl);
 
+    if (!response.ok) {
+        throw new Error('Could not fetch weather Data');
+    }
 
+    return await response.json();
 
+}
 
+function displayWeatherInfo(data) {
+    const {name: city, main: {temp, humidity}, weather: [{description, id}]} = data;
 
+    card.textContent = '';
+    card.style.display = 'flex';
+    
+    const cityDisplay = document.createElement('h1');
+    const tempDisplay = document.createElement('p');
+    const humidityDisplay = document.createElement('p');
+    const descDisplay = document.createElement('p');
+    const weatherEmoji = document.createElement('p');
+    
+    cityDisplay.textContent = city;
+    tempDisplay.textContent = `${(temp - 273.15).toFixed(2)}°C`;
+    humidityDisplay.textContent = `Humidity: ${humidity}%`;
+    descDisplay.textContent = description;
+    weatherEmoji.textContent = getWeatherEmoji(id);
 
+    cityDisplay.classList.add('cityDisplay');
+    tempDisplay.classList.add('tempDisplay');
+    humidityDisplay.classList.add('humidityDisplay');
+    descDisplay.classList.add('descDisplay');
+    weatherEmoji.classList.add('weatherEmoji');
 
+    card.appendChild(cityDisplay);
+    card.appendChild(tempDisplay);
+    card.appendChild(humidityDisplay);
+    card.appendChild(descDisplay);
+    card.appendChild(weatherEmoji);
 
+}
 
+function getWeatherEmoji(weatherId) {
+    switch (true) {
+        case (weatherId >= 200 && weatherId < 300):
+            return '🌧️';
+        case (weatherId >= 300 && weatherId < 400):
+            return '🌧️';
+        case (weatherId >= 500 && weatherId < 600):
+            return '🌧️';
+        case (weatherId >= 600 && weatherId < 700):
+            return '❄️';
+        case (weatherId >= 700 && weatherId < 800):
+            return '🍃';
+        case (weatherId === 800):
+            return '☀️';
+        case (weatherId >= 801 && weatherId < 810):
+            return '☁️';
+        default: 
+            return '😮';
+    }
+}
 
+function displayError(message) {
+    
+    const errorDisplay = document.createElement('p');
+    errorDisplay.textContent = message;
+    errorDisplay.classList.add('errorDisplay');
 
+    card.textContent = "";
+    card.style.display = 'flex';
+    card.appendChild(errorDisplay);
 
-
-
-
-
+}
